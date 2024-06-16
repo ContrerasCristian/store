@@ -30,4 +30,7 @@ export class ProductService {
     }
     return cleanedImage;
   }
+  getOneProduct(id: string){
+    return this.http.get<Product>(`https://api.escuelajs.co/api/v1/products/${id}`)
+  }
 }
